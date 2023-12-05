@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taksimatkalaskuri</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <h1>Taksimatkalaskuri</h1>
+    <form id="taxiForm">
+        <label for="passengerCount">Matkustajien määrä:</label>
+        <input type="number" id="passengerCount" min="1" max="8" required><br>
+
+        <label for="kilometers">Kilometrimäärä:</label>
+        <input type="number" id="kilometers" min="2" max="30" required><br>
+
+        <label for="startTime">Aloituskellonaika (24h):</label>
+        <input type="number" id="startTime" min="0" max="23" required><br>
+
+        <button type="button" onclick="calculateTaxiPrice()">Laske hinta</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateTaxiPrice() {
+            const passengerCount = parseInt(document.getElementById('passengerCount').value);
+            const kilometers = parseInt(document.getElementById('kilometers').value);
+            const startTime = parseInt(document.getElementById('startTime').value);
+
+            let baseFare;
+            if ((startTime >= 22 && startTime <= 24) || (startTime >= 0 && startTime <= 6)) {
+                baseFare = 7.40;
+            } else {
+                baseFare = 5.40;
+            }
+
+            let pricePerKm;
+            if (passengerCount >= 1 && passengerCount <= 2) {
+                pricePerKm = 1.6;
+            } else if (passengerCount >= 3 && passengerCount <= 4) {
+                pricePerKm = 1.9;
+            } else if (passengerCount >= 5 && passengerCount <= 6) {
+                pricePerKm = 2.0;
+            } else if (passengerCount > 6) {
+                pricePerKm = 2.2;
+            } else {
+                document.getElementById('result').textContent = "Tarkista tiedot.";
+                return;
+            }
+
+            if (kilometers <= 0) {
+                document.getElementById('result').textContent = "Tarkista tiedot.";
+                return;
+            }
+
+            const totalCost = baseFare + pricePerKm * kilometers;
+            document.getElementById('result').textContent = `Matkustajia: ${passengerCount}, Kilometrejä: ${kilometers}, Aloituskellonaika: ${startTime}, Loppusumma: ${totalCost.toFixed(2)} €`;
+        }
+    </script>
+</body>
+</html>

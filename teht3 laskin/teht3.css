@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: pink;
+    font-family: Arial, sans-serif;
+}
+
+#calculator {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid pink;
+    border-radius: 10px;
+}
+
+.pink-background {
+    background-color: pink;
+}
+
+.pink-text {
+    color: pink;
+    background-color: black;
+    border: 1px solid pink;
+}
+
+.pink-button {
+    background-color: pink;
+    color: black;
+    border: 1px solid pink;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pink-button:hover {
+    background-color: black;
+    color: pink;
+}

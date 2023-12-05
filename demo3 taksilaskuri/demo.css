@@ -1,0 +1,23 @@
+body {
+    background-image: url('wp1898151.png');
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50); 
+    z-index: -1; 
+  }
+
+
+h1 {
+    text-align: center;
+}
