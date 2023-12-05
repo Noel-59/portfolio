@@ -111,7 +111,7 @@ h6 {
 #header .profile .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #212431;
+  background: #ffffff;
   color: #ff004c;
   line-height: 1;
   padding: 8px 0;
@@ -125,7 +125,7 @@ h6 {
 
 #header .profile .social-links a:hover {
   background: #ff004c;
-  color: #212431;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -476,7 +476,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #ffffff;
 }
 
 .resume .resume-item {
@@ -492,7 +492,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -554,7 +554,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: #ffffff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -660,7 +660,7 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  box-shadow: 0px 0 30px rgba(255, 255, 255, 0.08);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -851,7 +851,7 @@ section {
 
 .contact .info {
   padding: 30px;
-  background: rgb(120, 120, 120);
+  background: #ff004c;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
@@ -862,7 +862,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -875,7 +875,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: #ffffff;
 }
 
 .contact .info p {
@@ -896,7 +896,7 @@ section {
 .contact .info .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #333;
+  background: #ff004c;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -910,7 +910,7 @@ section {
 
 .contact .info .social-links a:hover {
   background: #ff004c;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .contact .info .email:hover i,
@@ -923,7 +923,7 @@ section {
 .contact .php-email-form {
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background: #ff004c;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -941,7 +941,7 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: rgb(255, 255, 255);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -1031,7 +1031,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
-  background: #f9f9f9;
+  background: rgb(0, 0, 0);
 }
 
 .breadcrumbs h2 {
