@@ -414,7 +414,7 @@ section {
   margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #122f57;
+  color: #ffffff;
 }
 
 .facts .count-box a {
@@ -432,7 +432,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -541,7 +541,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  background: rgb(0, 0, 0);
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -737,7 +737,7 @@ section {
 }
 
 .services .title a {
-  color: #343a40;
+  color: #ff004c;
 }
 
 .services .title a:hover {
