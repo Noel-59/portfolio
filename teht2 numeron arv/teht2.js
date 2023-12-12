@@ -3,7 +3,7 @@ let totalGames = 0;
 let totalGuesses = 0;
  
 function generateSecretNumber() {
-    return Math.floor(Math.random() * 10) + 1;
+    return Math.floor(Math.random() * 100) + 1;
 }
  
 function startNewGame() {
