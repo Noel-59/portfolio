@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap'); /* Custom Google Font */
+
+/* Center the content vertically and horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the content */
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  background-color: #000;
+  font-family: 'Courier Prime', monospace; /* Applying the Google Font */
+  color: #03a9f4;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typewriter container */
+.typewriter {
+  font-size: 1.2em; /* Adjusted font size */
+  white-space: nowrap; /* Keeps the text on a single line */
+  overflow: hidden; /* Hides the text overflow for typewriter effect */
+  border-right: 2px solid #03a9f4; /* Cursor effect */
+  animation: typing 4s steps(40, end), blink-caret 1s step-end infinite; /* Typing and blinking cursor */
+  width: 24ch; /* Adjust width to the length of the text (24 characters) */
+  margin-bottom: 30px; /* Space between text and images */
+  text-align: center; /* Center the text */
+}
+
+/* Typewriter effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 24ch; } /* Set to match the length of the text */
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #03a9f4; }
+}
+
+/* Fade in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Image styling */
+.image-container {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center;
+  gap: 20px; /* Space between images */
+  flex-wrap: wrap; /* Allow images to wrap if necessary */
+}
+
+.image-container img {
+  max-width: 150px; /* Make the images smaller */
+  height: auto; /* Ensure the aspect ratio is maintained */
+  border-radius: 10px; /* Add some rounding to the corners */
+  filter: drop-shadow(0 0 15px rgba(3, 169, 244, 0.5)); /* Add glow shadow around the image */
+}
+
+/* Fade effect on image edges */
+.image-container img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; /* Same as the image */
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent); /* Faded edges effect */
+  pointer-events: none; /* So that the hover or click works on the image */
+}
+
+.Takaisin {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Takaisin a {
+  color: #03a9f4;
+  font-size: 1.2em;
+  text-decoration: none;
+}

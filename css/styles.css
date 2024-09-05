@@ -13,28 +13,46 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  transition: opacity 1s ease; 
 }
+
+body.fade-out {
+  opacity: 0; 
+}
+
 
 .content {
   position: relative;
+  text-align: center; /* Center align the text */
 }
 
 .content h2 {
   color: #fff;
   font-size: 8em;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: absolute; /* Overlap text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
 }
-
 
 .content h2:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 2px #03a9f4;
+  top: 0; /* Adjust as needed */
 }
 
 .content h2:nth-child(2) {
   color: #03a9f4;
+  top: 0; /* Adjust as needed */
   animation: animate 4s ease-in-out infinite;
+}
+
+.subtle-text {
+  color: #03a9f4; 
+  font-size: 0.5em; 
+  display: block; /* Make it a block element to position below h2 */
+  margin-top: 1em; /* Adjust spacing below the h2 */
+  opacity: 0; 
+  animation: fadeIn 5s ease forwards; 
 }
 
 @keyframes animate {
@@ -67,3 +85,16 @@ body {
     );
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 0.7; /* Final opacity */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+
