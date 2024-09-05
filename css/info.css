@@ -19,19 +19,21 @@ body {
 /* Typewriter container */
 .typewriter {
   font-size: 1.2em; /* Adjusted font size */
-  white-space: nowrap; /* Keeps the text on a single line */
+  white-space: nowrap; /* Keep text on a single line initially */
   overflow: hidden; /* Hides the text overflow for typewriter effect */
   border-right: 2px solid #03a9f4; /* Cursor effect */
-  animation: typing 4s steps(40, end), blink-caret 1s step-end infinite; /* Typing and blinking cursor */
-  width: 24ch; /* Adjust width to the length of the text (24 characters) */
+  animation: typing 8s steps(60, end), blink-caret 1s step-end infinite; /* Typing and blinking cursor */
+  display: inline-block; /* Adjust to fit content width */
   margin-bottom: 30px; /* Space between text and images */
   text-align: center; /* Center the text */
+  width: fit-content; /* Make the width fit the content */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Typewriter effect */
 @keyframes typing {
   from { width: 0; }
-  to { width: 24ch; } /* Set to match the length of the text */
+  to { width: 100%; } /* Ensure animation covers the content width */
 }
 
 /* Blinking cursor effect */
@@ -39,6 +41,8 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: #03a9f4; }
 }
+
+
 
 /* Fade in effect */
 @keyframes fadeIn {
@@ -68,12 +72,6 @@ body {
   mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   mask-size: 100% 100%;
 }
-
-
-
-
-
-
 
 .Takaisin {
   position: absolute;
