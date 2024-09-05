@@ -46,34 +46,34 @@ body {
   to { opacity: 1; }
 }
 
-/* Image styling */
+/* Image container */
 .image-container {
   display: flex;
   justify-content: center; /* Center images horizontally */
   align-items: center;
   gap: 20px; /* Space between images */
   flex-wrap: wrap; /* Allow images to wrap if necessary */
+  position: relative; /* Required for the absolute positioning of pseudo-elements */
 }
 
+/* Image styling */
 .image-container img {
-  max-width: 150px; /* Make the images smaller */
-  height: auto; /* Ensure the aspect ratio is maintained */
-  border-radius: 10px; /* Add some rounding to the corners */
-  filter: drop-shadow(0 0 15px rgba(3, 169, 244, 0.5)); /* Add glow shadow around the image */
+  max-width: 500px; /* Make the images larger */
+  max-height: 500px; /* Maintain aspect ratio */
+  border-radius: 20px; /* Rounded corners */
+  position: relative; /* Required for the mask image */
+  z-index: 1; /* Ensure image is above the gradient mask */
+  opacity: 1; /* Increase the opacity of the image itself */
+  -webkit-mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-size: 100% 100%;
 }
 
-/* Fade effect on image edges */
-.image-container img::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px; /* Same as the image */
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent); /* Faded edges effect */
-  pointer-events: none; /* So that the hover or click works on the image */
-}
+
+
+
+
+
 
 .Takaisin {
   position: absolute;
