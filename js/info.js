@@ -18,7 +18,8 @@ window.onload = function() {
             typewriter.appendChild(cursorSpan); // Re-append the cursor to keep it at the end
             setTimeout(type, speed); // Repeat until the whole text is typed
         } else {
-            cursorSpan.style.display = 'none'; // Hide the cursor when done
+            // Optionally, keep the cursor visible after typing is done
+            cursorSpan.style.display = 'inline-block'; // Ensure cursor is visible
         }
     }
 
