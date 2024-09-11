@@ -4,45 +4,46 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertically center the content */
+  align-items: center;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   background-color: #000;
-  font-family: 'Courier Prime', monospace; /* Applying the Google Font */
+  font-family: 'Courier Prime', monospace;
   color: #03a9f4;
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Typewriter container */
 .typewriter {
-  font-size: 1.2em; /* Adjusted font size */
-  white-space: nowrap; /* Keep text on a single line initially */
-  overflow: hidden; /* Hides the text overflow for typewriter effect */
-  border-right: 2px solid #03a9f4; /* Cursor effect */
-  animation: typing 8s steps(60, end), blink-caret 1s step-end infinite; /* Typing and blinking cursor */
-  display: inline-block; /* Adjust to fit content width */
-  margin-bottom: 30px; /* Space between text and images */
-  text-align: center; /* Center the text */
-  width: fit-content; /* Make the width fit the content */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-size: 1.2em;
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  position: relative;
 }
 
-/* Typewriter effect */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; } /* Ensure animation covers the content width */
+/* Cursor effect */
+.cursor {
+  display: inline-block; /* Ensures the cursor behaves like text */
+  width: 2px;
+  height: 1em; /* Matches the height of the text */
+  background-color: #03a9f4; /* Cursor color */
+  animation: blink-caret 1s step-end infinite; /* Blinking effect */
+  vertical-align: bottom; /* Align cursor with the text baseline */
 }
 
 /* Blinking cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #03a9f4; }
+  from, to { opacity: 1; }
+  50% { opacity: 0; } /* Makes the cursor blink */
 }
-
-
 
 /* Fade in effect */
 @keyframes fadeIn {
@@ -53,22 +54,16 @@ body {
 /* Image container */
 .image-container {
   display: flex;
-  justify-content: center; /* Center images horizontally */
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* Space between images */
-  flex-wrap: wrap; /* Allow images to wrap if necessary */
-  position: relative; /* Required for the absolute positioning of pseudo-elements */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Image styling */
 .image-container img {
-  max-width: 500px; /* Make the images larger */
-  max-height: 500px; /* Maintain aspect ratio */
-  border-radius: 20px; /* Rounded corners */
-  position: relative; /* Required for the mask image */
-  z-index: 1; /* Ensure image is above the gradient mask */
-  opacity: 1; /* Increase the opacity of the image itself */
-  -webkit-mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 20px;
   mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   mask-size: 100% 100%;
 }
