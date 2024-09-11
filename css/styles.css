@@ -14,6 +14,9 @@ body {
   align-items: center;
   justify-content: center;
   transition: opacity 1s ease; 
+  /* Apply custom cursor */
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; /* Adjust path as necessary */
+
 }
 
 body.fade-out {

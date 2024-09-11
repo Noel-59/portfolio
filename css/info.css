@@ -15,6 +15,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+  /* Apply custom cursor */
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; /* Adjust path as necessary */
 }
 
 /* Typewriter container */
