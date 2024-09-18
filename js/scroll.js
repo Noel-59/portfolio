@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var isScrolling = false;
-    var redirectUrl = "info.html"; 
+    var redirectUrl = "/views/info.html"; 
 
     function handleScroll() {
         if (!isScrolling) {

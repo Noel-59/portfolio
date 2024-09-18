@@ -15,9 +15,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-  /* Apply custom cursor */
-  cursor: url('/images/arrowhead-rounded-outline.png'), auto; /* Adjust path as necessary */
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
 }
 
 /* Typewriter container */
@@ -67,9 +65,11 @@ body {
   max-width: 500px;
   max-height: 500px;
   border-radius: 20px;
-  mask-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Fade at the edges, full opacity in the middle */
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   mask-size: 100% 100%;
 }
+
 
 .Takaisin {
   position: absolute;
@@ -81,4 +81,26 @@ body {
   color: #03a9f4;
   font-size: 1.2em;
   text-decoration: none;
+}
+
+/* Styles for PROJEKTIT button */
+.Projektit {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.Projektit a {
+  color: #03a9f4;
+  font-size: 1.5em;
+  text-decoration: none;
+  border: 2px solid #03a9f4;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Projektit a:hover {
+  background-color: #03a9f4;
+  color: #000;
 }

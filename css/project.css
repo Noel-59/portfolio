@@ -1,0 +1,72 @@
+body {
+  font-family: 'Courier Prime', monospace;
+  background-color: #000;
+  color: #03a9f4;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #03a9f4;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center; /* Center the link */
+}
+
+/* Styling for the project links */
+.project a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #03a9f4;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0px 4px 10px rgba(3, 169, 244, 0.4);
+}
+
+/* Hover effect for the links */
+.project a:hover {
+  background-color: #0288d1;
+  color: #fff;
+  box-shadow: 0px 6px 12px rgba(2, 136, 209, 0.6);
+  transform: scale(1.05); /* Slightly enlarges the link */
+}
+
+/* Takaisin button styling identical to info page */
+.Takaisin {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Takaisin a {
+  color: #03a9f4;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.Takaisin a:hover {
+  color: #0288d1;
+  text-shadow: 0px 0px 5px #03a9f4;
+}

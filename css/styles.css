@@ -14,8 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: opacity 1s ease; 
-  /* Apply custom cursor */
-  cursor: url('/images/arrowhead-rounded-outline.png'), auto; /* Adjust path as necessary */
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
 
 }
 
@@ -100,4 +99,14 @@ body.fade-out {
   }
 }
 
+.Takaisin {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 
+.Takaisin a {
+  color: #03a9f4;
+  font-size: 1.2em;
+  text-decoration: none;
+}
