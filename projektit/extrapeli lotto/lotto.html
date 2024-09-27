@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lotto</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lotto.css" />
+  </head>
+
+  <body>
+    <div class="container center rounded shadow-lg">
+      <img class="img-fluid" src="lotto.jpg" style="width:50%;" />
+      <div class=" my-4" id="cyfry"></div>
+      <div class="h4" id="napis"></div>
+
+      <div>
+        <div class="cyfral" id="l1"></div>
+        <div class="cyfral" id="l2"></div>
+        <div class="cyfral" id="l3"></div>
+        <div class="cyfral" id="l4"></div>
+        <div class="cyfral" id="l5"></div>
+        <div class="cyfral" id="l6"></div>
+      </div>
+      <button id="przyc" class="m-2 btn btn-dark" onclick="spr()" type="button">
+        Check if you win!
+      </button>
+      <button class="m-2 btn btn-dark" onClick="window.location.reload()">
+        Again
+      </button>
+      <div class="container" id="alfabet"></div>
+    </div>
+
+    <script src="lotto.js"></script>
+  </body>
+</html>

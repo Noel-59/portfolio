@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #000;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease; 
+  cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
+
+}
+
+body.fade-out {
+  opacity: 0; 
+}
+
+
+.content {
+  position: relative;
+  text-align: center; /* Center align the text */
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute; /* Overlap text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+  top: 0; /* Adjust as needed */
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  top: 0; /* Adjust as needed */
+  animation: animate 4s ease-in-out infinite;
+}
+
+.subtle-text {
+  color: #03a9f4; 
+  font-size: 0.5em; 
+  display: block; /* Make it a block element to position below h2 */
+  margin-top: 1em; /* Adjust spacing below the h2 */
+  opacity: 0; 
+  animation: fadeIn 5s ease forwards; 
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 0.7; /* Final opacity */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.Takaisin {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Takaisin a {
+  color: #03a9f4;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+
+/* Fades */
+
+/* Add this to your styles.css or a common CSS file */
+
+body.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+body.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

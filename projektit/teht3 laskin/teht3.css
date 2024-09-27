@@ -1,36 +1,71 @@
+/* Center the body content */
 body {
     background-color: black;
-    color: pink;
+    color: red;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Style the calculator container */
 #calculator {
-    text-align: center;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 20px;
     padding: 20px;
-    border: 2px solid pink;
-    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 15px 3px rgba(255, 0, 0, 0.3);
 }
 
-.pink-background {
-    background-color: pink;
-}
-
-.pink-text {
-    color: pink;
+/* Style the display */
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
     background-color: black;
-    border: 1px solid pink;
+    color: red;
+    border: 1px solid red;
 }
 
-.pink-button {
-    background-color: pink;
+/* Style the buttons */
+button {
+    background-color: red;
     color: black;
-    border: 1px solid pink;
-    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    padding: 15px;
     margin: 5px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 60px;
+    height: 60px;
 }
 
-.pink-button:hover {
+button:hover {
     background-color: black;
-    color: pink;
+    color: red;
+    border: 1px solid red;
+}
+
+/* Style the "C" button */
+button:nth-last-child(1) {
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    width: 240px;
+}
+
+button:nth-last-child(1):hover {
+    background-color: red;
+    color: black;
 }

@@ -1,0 +1,40 @@
+.apartment {
+    width: 100%;
+}
+.apartmentheader {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+.apartment .icon {
+    position: relative;
+    height: 100%;
+}
+.apartment .icon img {
+    max-width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    position: absolute;
+}
+.apartment .frame {
+    background-color: #21839B;
+}
+.apartment .frame .top {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+.apartment .tours {
+    list-style-type: none;
+}
+.tour {
+    font-size: 20px;
+}
+.tour a {
+    text-decoration: none;
+    color: white;
+    background-color: #3EB552;
+    font-size: 1.5em;
+    padding: 8px;
+    border-radius: 8px;
+}

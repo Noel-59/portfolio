@@ -1,0 +1,154 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(to bottom, #3fc2ff, #ffffff); /* Dark red to yellow gradient */
+}
+
+
+
+input[type="submit"],
+input[type="button"],
+.pink-button {
+    padding: 10px 20px; /* Increased padding for better clickability */
+    font-size: 18px; /* Slightly increased font size */
+    width: 200px;
+    margin: 15px;
+    color: #ffffff;
+    background-color: #4093e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect for buttons */
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.pink-button:hover {
+    background-color: #00b4d4; /* Darker shade on hover */
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 44px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.back-home {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+/* Style links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Add hover effect for links */
+a:hover {
+    color: #7b9193; /* Change color on hover */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px; /* Padding for header content */
+}
+
+/* Main content */
+.main-content {
+    margin-top: 60px; /* Adjust margin to accommodate header */
+    margin-bottom: 60px; /* Adjust margin to accommodate footer */
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px; /* Padding for footer content */
+}
+
+
+button {
+    background-color: #00e1ff; /* Use vibrant color for submit buttons */
+    font-size: 24px;
+    border-radius: 7px;
+}
+
+button:hover {
+    color: #00bfff; /* Change color on hover */
+}
+
+/* Style for the navigation bar */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff3a; /* Dark background color for the navigation bar */
+    overflow: hidden;
+    text-align: center; /* Center the buttons */
+}
+
+/* Style for individual navigation items */
+.navbutton {
+    display: inline-block; /* Display buttons inline */
+}
+
+/* Style for links inside navigation items */
+.navbutton a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ddd; /* Add border between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect for navigation links */
+.navbutton a:hover {
+    background-color: #00e1ff; /* Dark background color on hover */
+}
+
+
+/* Add CSS for the header buttons */
+header button {
+    background-color: #4093e0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header button:hover {
+    background-color: #0086d4;
+}
+
+h1 {
+    font-size: 77px;
+    color: #ffffff;
+}
+
+

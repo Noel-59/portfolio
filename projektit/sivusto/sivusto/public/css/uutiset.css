@@ -1,0 +1,196 @@
+header {
+    background: #21839B;
+    padding: 8px;
+}
+
+header h1 {
+    display: inline-block;
+    text-shadow: 3px 3px 12px #00000090;
+}
+
+body {
+    margin: 0px;
+    background-color: #2C91A4;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    display: inline-block;
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.navbutton {
+    margin: 8px 0px 8px 8px;
+    display: inline-block;
+}
+
+.navbutton a {
+    text-shadow: 0px 0px 8px #0000006e;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.navbutton a:hover {
+    color: rgb(220, 220, 220);
+    font-size: 3.025em;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+h2 {
+    text-shadow: 0px 0px 8px #00000090;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+}
+h3 {
+        text-shadow: 0px 0px 8px #00000090;
+        color: white;
+        font-size: 3em;
+        font-weight: bold;
+        font-family: Arial;
+        text-decoration: none;
+}
+label {
+    text-shadow: 0px 0px 8px #00000090;
+    color: white;
+    font-size: 1em;
+    font-family: Arial;
+    text-decoration: none;
+}
+.homeimg {
+    width: 630px;
+    height: auto;
+}
+p {
+    text-shadow: 0px 0px 8px #00000090;
+    color: white;
+    font-size: 2em;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+.inputarea {
+    display:flex;
+    width: 60% ;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+
+
+
+textarea {
+    width: 100%;
+    border-radius: 0px;
+    padding: 7px;
+    border: 4px gray;
+    font-size: 1.2em; 
+  }
+
+
+select {
+    width: 100%;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 2px;
+    border: 2px outset gray;
+}
+
+
+.centeredtext, .centered {
+    height: 60px;
+    color: white;
+    border: 4px gray;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 0px 0px 8px #00000090;
+}
+
+.centeredtext,
+.centered {
+    text-shadow: 0px 0px 8px #00000090;
+    color: white;
+    font-size: 1.2em;
+    font-family: Arial;
+    text-decoration: none;
+    text-align: center;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsitem {
+    border: solid 0.1em;
+    padding: 1em 2em;
+    border-radius: 2em;
+    border-width: 0px;
+    margin-bottom: 20px;
+    background-color:#21839B;
+    width: 90%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.neweritem {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+input{
+    margin: 5px;
+    width: 100%;
+    font-family: Arial;
+    background-color:#ffffff;
+    border-width: 0px;
+    border-radius: 0px;
+    border-width: 0px;
+}
+.inputarea input[type="submit"] {
+    text-shadow: 0px 0px 8px #00000090;
+    color: white;
+    font-size: 1.2em;
+    font-family: Arial;
+    font-weight: bold;
+    background-color:#21839B;
+    border-radius: 10px;
+    border-width: 0px;
+    width: 100%; /* This ensures the button fills its container */
+    max-width: 850px; /* Set a maximum width for the button */
+}
+select{
+    margin: 5px;
+    width: 100%;
+    font-family: Arial;
+    background-color:#ffffff;
+    border-width: 0px;
+    border-radius: 0px;
+    border-width: 0px;
+}
+option{
+    margin: 5px;
+    width: 100%;
+    font-family: Arial;
+    background-color:#ffffff;
+    border-width: 0px;
+    border-radius: 0px;
+    border-width: 0px;
+}

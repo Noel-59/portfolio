@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbutton {
+    margin: 10px;
+}
+
+.header img {
+    width: auto;
+    height: 250px; 
+}

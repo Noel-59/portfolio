@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+// js/scroll.js
+document.addEventListener('DOMContentLoaded', function () {
     var isScrolling = false;
     var redirectUrl = "/views/info.html"; 
 
@@ -10,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('fade-out');
 
             // Redirect after the fade-out transition
-            setTimeout(function() {
+            setTimeout(function () {
                 window.location.href = redirectUrl;
-            }, 1000); // Match this duration with the CSS transition time
+            }, 500); // Match this duration with the CSS transition time (0.5s)
         }
     }
 
