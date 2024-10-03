@@ -41,11 +41,11 @@ function loginController(){
 }
 
 function logoutController(){
-    session_unset(); //poistaa kaikki muuttujat
+    session_unset(); 
     session_destroy();
-    setcookie(session_name(),'',0,'/'); //poistaa evästeen selaimesta
+    setcookie(session_name(),'',0,'/'); 
     session_regenerate_id(true);
-    header("Location: /login"); // forward eli uudelleenohjaus
+    header("Location: /login"); 
     die();
 }
 ?>

@@ -1,30 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap'); /* Custom Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap'); 
 
-/* Center the content vertically and horizontally */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #000;
   font-family: 'Courier Prime', monospace;
   color: #03a9f4;
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 20px; 
   cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
 }
 
-/* Typewriter container */
+
 .typewriter {
   font-size: 1.2em;
   display: inline-block;
   text-align: left;
-  max-width: 100%;
-  box-sizing: border-box;
+  max-width: 90%; 
   white-space: normal;
   word-wrap: break-word;
   position: relative;
@@ -32,49 +35,47 @@ body {
 
 /* Cursor effect */
 .cursor {
-  display: inline-block; /* Ensures the cursor behaves like text */
+  display: inline-block; 
   width: 2px;
-  height: 1em; /* Matches the height of the text */
-  background-color: #03a9f4; /* Cursor color */
-  animation: blink-caret 1s step-end infinite; /* Blinking effect */
-  vertical-align: bottom; /* Align cursor with the text baseline */
+  height: 1em; 
+  background-color: #03a9f4; 
+  animation: blink-caret 1s step-end infinite;
+  vertical-align: bottom;
 }
 
-/* Blinking cursor effect */
 @keyframes blink-caret {
   from, to { opacity: 1; }
-  50% { opacity: 0; } /* Makes the cursor blink */
+  50% { opacity: 0; }
 }
 
-/* Fade in effect */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Image container */
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px; 
 }
 
 .image-container img {
-  max-width: 500px;
-  max-height: 500px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 20px;
-  /* Fade at the edges, full opacity in the middle */
   mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   mask-size: 100% 100%;
 }
 
-
 .Takaisin {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px; 
+  left: 10px;
+  z-index: 1; 
 }
 
 .Takaisin a {
@@ -83,7 +84,27 @@ body {
   text-decoration: none;
 }
 
-/* Styles for PROJEKTIT button */
+/* Responsive design: media queries */
+@media (max-width: 768px) {
+  .Takaisin {
+    top: 20px; 
+    left: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .Takaisin {
+    top: 30px; 
+    left: 10px;
+  }
+
+  .typewriter {
+    font-size: 1em; 
+    margin-top: 50px; 
+  }
+}
+
+
 .Projektit {
   margin-top: 30px;
   text-align: center;
@@ -91,7 +112,7 @@ body {
 
 .Projektit a {
   color: #03a9f4;
-  font-size: 1.5em;
+  font-size: 1.2em; 
   text-decoration: none;
   border: 2px solid #03a9f4;
   padding: 10px 20px;
@@ -105,28 +126,62 @@ body {
   color: #000;
 }
 
-/* Footer styles */
 .footer {
-  background-color: rgba(3, 169, 244, 0.1); /* Light blue background */
-  color: #03a9f4; /* Footer text color */
+  background-color: rgba(3, 169, 244, 0.1);
+  color: #03a9f4;
   padding: 20px;
   text-align: center;
-  border-top: 1px solid #03a9f4; /* Top border */
-  margin-top: 40px; /* Space from the content above */
-  width: 100%; /* Ensure footer fills the full width */
+  border-top: 1px solid #03a9f4;
+  margin-top: 40px;
+  width: 100%;
 }
 
 .footer-content p {
-  margin: 10px 0; /* Space between paragraphs */
+  margin: 10px 0;
 }
 
 .footer-content a {
-  color: #03a9f4; /* Link color */
-  text-decoration: none; /* No underline */
-  transition: color 0.3s; /* Smooth transition for hover */
+  color: #03a9f4;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-content a:hover {
-  color: #0288d1; /* Darker blue on hover */
-  text-shadow: 0px 0px 5px #03a9f4; /* Glowing effect on hover */
+  color: #0288d1;
+  text-shadow: 0px 0px 5px #03a9f4;
+}
+
+/* Responsive design: media queries */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 1.1em;
+  }
+
+  .image-container {
+    gap: 10px;
+  }
+
+  .image-container img {
+    max-width: 250px;
+  }
+
+  .Projektit a {
+    font-size: 1.1em;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1em;
+  }
+
+  .image-container img {
+    max-width: 200px;
+  }
+
+  .Projektit a {
+    font-size: 1em;
+    padding: 6px 12px;
+  }
 }

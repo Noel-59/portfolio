@@ -15,46 +15,57 @@ body {
   justify-content: center;
   transition: opacity 1s ease; 
   cursor: url('/images/arrowhead-rounded-outline.png'), auto; 
-
 }
 
 body.fade-out {
   opacity: 0; 
 }
 
-
 .content {
   position: relative;
-  text-align: center; /* Center align the text */
+  text-align: center; 
 }
 
 .content h2 {
   color: #fff;
   font-size: 8em;
-  position: absolute; /* Overlap text */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .content h2:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 2px #03a9f4;
-  top: 0; /* Adjust as needed */
+  top: 0; 
 }
 
 .content h2:nth-child(2) {
   color: #03a9f4;
-  top: 0; /* Adjust as needed */
+  top: 0; 
   animation: animate 4s ease-in-out infinite;
 }
 
 .subtle-text {
   color: #03a9f4; 
   font-size: 0.5em; 
-  display: block; /* Make it a block element to position below h2 */
-  margin-top: 1em; /* Adjust spacing below the h2 */
+  display: block; 
+  margin-top: 1em; 
   opacity: 0; 
   animation: fadeIn 5s ease forwards; 
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.subtle-text {
+  animation: subtlePulse 1.5s ease-in-out infinite; /* pulse effect */
 }
 
 @keyframes animate {
@@ -91,11 +102,11 @@ body.fade-out {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Start slightly below */
+    transform: translateY(20px); 
   }
   to {
-    opacity: 0.7; /* Final opacity */
-    transform: translateY(0); /* End at original position */
+    opacity: 0.7; 
+    transform: translateY(0); 
   }
 }
 
@@ -111,11 +122,27 @@ body.fade-out {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 5em; 
+  }
+
+  .subtle-text {
+    font-size: 0.7em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+    font-size: 4em; 
+  }
+
+  .subtle-text {
+    font-size: 0.8em; 
+  }
+}
 
 /* Fades */
-
-/* Add this to your styles.css or a common CSS file */
-
 body.fade-in {
   opacity: 0;
   animation: fadeIn 0.5s forwards;
