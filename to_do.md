@@ -1,5 +1,3 @@
 
-- responsiivisuus
-
-- 105kg penkki
+- 105kg penkki 😮‍💨
 

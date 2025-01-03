@@ -13,9 +13,9 @@ function addArticleController(){
         $text = cleanUpInput($_POST['newstext']);
         $time = cleanUpInput($_POST['newstime']);
         $removetime = cleanUpInput($_POST['removedate']);
-        $section = cleanUpInput($_POST['section']); // New line to retrieve section
+        $section = cleanUpInput($_POST['section']); 
         $userid = $_SESSION["userid"];
-        addArticle($title, $text, $time, $removetime, $section, $userid); // Updated function call with section
+        addArticle($title, $text, $time, $removetime, $section, $userid); 
         header("Location: /");    
     } else {
         require "views/newArticle.view.php";

@@ -1,27 +1,25 @@
 window.onload = function() {
     const typewriter = document.querySelector('.typewriter');
-    const text = typewriter.textContent; // Get the original text content
-    typewriter.textContent = ''; // Clear the content to start typing
+    const text = typewriter.textContent; 
+    typewriter.textContent = ''; 
 
-    // Create a span element for the blinking cursor
     const cursorSpan = document.createElement('span');
     cursorSpan.classList.add('cursor');
-    typewriter.appendChild(cursorSpan); // Append it to the typewriter element
+    typewriter.appendChild(cursorSpan); 
 
     let index = 0;
-    const speed = 80; // Typing speed in milliseconds per character
+    const speed = 80; 
 
     function type() {
         if (index < text.length) {
-            typewriter.textContent += text.charAt(index); // Append the next character
+            typewriter.textContent += text.charAt(index); 
             index++;
-            typewriter.appendChild(cursorSpan); // Re-append the cursor to keep it at the end
-            setTimeout(type, speed); // Repeat until the whole text is typed
+            typewriter.appendChild(cursorSpan); 
+            setTimeout(type, speed); 
         } else {
-            // Optionally, keep the cursor visible after typing is done
-            cursorSpan.style.display = 'inline-block'; // Ensure cursor is visible
+            cursorSpan.style.display = 'inline-block';
         }
     }
 
-    type(); // Start typing
+    type();
 };
