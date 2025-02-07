@@ -30,6 +30,7 @@ body {
   white-space: normal;
   word-wrap: break-word;
   position: relative;
+  margin-top: auto;
 }
 
 /* Cursor effect */
